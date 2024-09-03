@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (user) {
-			const socket = io("https://chat-app-backend-pi-navy.vercel.app", {
+			const socket = io("https://chat-app-backend-q94f.onrender.com", {
 				query: {
 					userId: user?._id,
 				},

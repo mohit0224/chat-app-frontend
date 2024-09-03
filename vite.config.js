@@ -46,7 +46,7 @@ export default defineConfig({
 		port: process.env.PORT || 5173,
 		proxy: {
 			"/api": {
-				target: "https://chat-app-backend-pi-navy.vercel.app",
+				target: "https://chat-app-backend-q94f.onrender.com",
 				changeOrigin: true,
 			},
 		},
