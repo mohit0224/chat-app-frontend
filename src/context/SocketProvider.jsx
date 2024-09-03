@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (user) {
-			const socket = io(import.meta.env.VITE_BACKEND_URI, {
+			const socket = io("https://chat-app-backend-pi-navy.vercel.app", {
 				query: {
 					userId: user?._id,
 				},
