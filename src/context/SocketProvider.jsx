@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (user) {
-			const socket = io("https://chat-app-backend-q94f.onrender.com", {
+			const socket = io(import.meta.env.VITE_BACKEND_URI, {
 				query: {
 					userId: user?._id,
 				},
