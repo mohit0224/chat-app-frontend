@@ -1,0 +1,10 @@
+{
+	"version": 2,
+
+	"rewrites": [
+		{
+			"source": "/api/v1/(.*)",
+			"destination": "https://chat-app-backend-pi-navy.vercel.app/api/v1/$1"
+		}
+	]
+}
