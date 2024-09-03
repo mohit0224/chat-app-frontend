@@ -34,7 +34,7 @@ export const SocketProvider = ({ children }) => {
 	useEffect(() => {
 		socket?.on("new-message", (users) => {
 			const notification = new Audio(notificationAudio);
-			// notification.play();
+			notification.play();
 
 			setUserMessage([...userMessage, users]);
 		});
