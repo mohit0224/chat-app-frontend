@@ -15,7 +15,7 @@ const ChatMessage = () => {
 		<div
 			ref={latestMessage}
 			id="hideScrollBar"
-			className="h-[calc(100%-145px)] overflow-hidden overflow-y-scroll px-5 pt-5 space-y-3 bg-[url('/background.webp')] bg-cover bg-center"
+			className="h-[calc(100vh-145px)] overflow-hidden overflow-y-scroll px-5 pt-5 space-y-3 bg-[url('/background.webp')] bg-cover bg-center"
 		>
 			{userMessage.map((data, i) => {
 				return data.senderId === userDetails._id ? (

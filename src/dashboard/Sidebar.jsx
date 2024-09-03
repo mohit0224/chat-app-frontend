@@ -38,7 +38,7 @@ const Sidebar = () => {
 				</div>
 			</div>
 			<hr />
-			<div className="h-[calc(100%-220px)] overflow-y-scroll mt-3 px-5 py-3 space-y-2">
+			<div className="h-[calc(100vh-220px)] overflow-y-scroll mt-3 px-5 py-3 space-y-2">
 				<div className="space-y-3">
 					{allUsers.map((user, i) => (
 						<User user={user} key={i} />
