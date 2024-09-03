@@ -42,15 +42,15 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
-	// server: {
-	// 	port: 3000,
-	// 	proxy: {
-	// 		"/api": {
-	// 			target: "http://localhost:8080",
-	// 			changeOrigin: true,
-	// 		},
-	// 	},
-	// },
+	server: {
+		port: 3000,
+		proxy: {
+			"/api": {
+				target: import.meta.env.VITE_BACKEND_URI,
+				changeOrigin: true,
+			},
+		},
+	},
 	build: {
 		outDir: "dist", // Make sure this matches Vercel's settings
 		sourcemap: true,
