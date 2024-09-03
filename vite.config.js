@@ -42,15 +42,15 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
-	server: {
-		port: 3000,
-		proxy: {
-			"/api": {
-				target: "https://chat-app-backend-pi-navy.vercel.app/api",
-				changeOrigin: true,
-			},
-		},
-	},
+	// server: {
+	// 	port: 3000,
+	// 	proxy: {
+	// 		"/api": {
+	// 			target: "https://chat-app-backend-pi-navy.vercel.app/api",
+	// 			changeOrigin: true,
+	// 		},
+	// 	},
+	// },
 	build: {
 		outDir: "dist", // Make sure this matches Vercel's settings
 		sourcemap: true,
