@@ -53,5 +53,6 @@ export default defineConfig({
 	// },
 	build: {
 		outDir: "dist", // Make sure this matches Vercel's settings
+		sourcemap: true,
 	},
 });
