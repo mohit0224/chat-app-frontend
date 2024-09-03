@@ -17,6 +17,7 @@ export const SocketProvider = ({ children }) => {
 					userId: user?._id,
 				},
 				withCredentials: true,
+				transports: ['websocket', 'polling'],
 			});
 			setSocket(socket);
 
