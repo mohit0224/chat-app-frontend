@@ -46,7 +46,7 @@ export default defineConfig({
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: import.meta.env.VITE_BACKEND_URI,
+				target: "https://chat-app-backend-pi-navy.vercel.app",
 				changeOrigin: true,
 			},
 		},
