@@ -3,8 +3,8 @@
 
 	"rewrites": [
 		{
-			"source": "/(.*)",
-			"destination": "index.html"
+			"source": "/api/v1/(.*)",
+			"destination": "https://chat-app-backend-q94f.onrender.com/api/v1/$1"
 		}
 	]
 }
