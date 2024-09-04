@@ -44,10 +44,10 @@ const Login = () => {
 			if (result) {
 				localStorage.setItem("user", JSON.stringify(result.data.data));
 				setUserDetails(result.data.data);
-				monitorCookieAndDeleteToken();
 				setButtonDisable(false);
 				getAllUsersFn();
 				navigate("/");
+				monitorCookieAndDeleteToken();
 			}
 		} catch (error) {
 			setButtonDisable(false);
