@@ -15,7 +15,7 @@ export const DataProvider = ({ children }) => {
 	const monitorCookieAndDeleteToken = async () => {
 		const response = await authServices.checkCookie();
 
-		const checkInterval = 5000;
+		const checkInterval = 1000;
 
 		const intervalId = setInterval(async () => {
 			const cookieExists = response.data?.cookieExists;
