@@ -42,15 +42,15 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
-	server: {
-		port: process.env.PORT || 5173,
-		proxy: {
-			"/api": {
-				target: "https://chat-app-backend-q94f.onrender.com",
-				changeOrigin: true,
-			},
-		},
-	},
+	// server: {
+	// 	port: process.env.PORT || 5173,
+	// 	proxy: {
+	// 		"/api": {
+	// 			target: "http://localhost:8080",
+	// 			changeOrigin: true,
+	// 		},
+	// 	},
+	// },
 	build: {
 		outDir: "dist", // Make sure this matches Vercel's settings
 		sourcemap: true,
