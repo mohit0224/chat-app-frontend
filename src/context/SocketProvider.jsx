@@ -1,6 +1,7 @@
 import { io } from "socket.io-client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useData } from "./DataProvider";
+import notificationAudio from "../assets/notification.mp3";
 
 const SocketContext = createContext();
 
@@ -16,7 +17,7 @@ export const SocketProvider = ({ children }) => {
 					userId: user?._id,
 				},
 				withCredentials: true,
-				transports: ["websocket", "polling"],
+				transports: ['websocket', 'polling'],
 			});
 			setSocket(socket);
 
@@ -32,6 +33,9 @@ export const SocketProvider = ({ children }) => {
 
 	useEffect(() => {
 		socket?.on("new-message", (users) => {
+			const notification = new Audio(notificationAudio);
+			notification.play();
+
 			setUserMessage([...userMessage, users]);
 		});
 	}, [userMessage, setUserMessage]);
